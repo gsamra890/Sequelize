@@ -1,26 +1,29 @@
 async function populateRestaurant() {
   const diningRequest = await fetch("/api/dining");
   const diningData = await diningRequest.json();
-  const targetBox = document.querySelector(".targetBox");
+  const name = document.querySelector(".id");
+  const name = document.querySelector(".name");
+  const name = document.querySelector(".address");
   console.table(diningData);
 
   diningData.data.forEach((item) => {
-    const appendItem = document.createElement("div");
+    const appendItem = document.createElement("ul");
     appendItem.classList.add("title", "has-text-centered", "is-parent", "is-3");
-    appendItem.innerHTML = `
-        <article class="title is-child box has-background-link-dark">
-        <span class = "subtitle has-text-light has-text-weight-bold">
-        ${item.hall_name}</span>
-        <br />
-        <span class="has-text-light">
-        ${item.hall_address.split(",")[0]}
-        </span>
-        <br />
-        <span class="has-text-light">
-        ${item.hall_address.split(",")[1]}
-        </span>
-        </article>`;
-    targetBox.append(appendItem);
+    appendItem.classList('.id')
+    appendName.innerHTML = ` ${item.hall_address.split(',')[0]}`;
+    id.append(appendName)
+
+    const appendItem = document.createElement("ul");
+    appendItem.classList.add("title", "has-text-centered", "is-parent", "is-3");
+    appendItem.classList('.name')
+    appendName.innerHTML = ` ${item.hall_name}`;
+    name.append(appendName)
+
+    const appendItem = document.createElement("ul");
+    appendItem.classList.add("title", "has-text-centered", "is-parent", "is-3");
+    appendItem.classList('.address')
+    appendName.innerHTML = ` ${item.hall_address.split(',')[0]}`;
+    address.append(appendName)
   });
 }
 

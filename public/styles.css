@@ -1,0 +1,26 @@
+h1 {
+    text-align: center;
+}
+
+section {
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+body {
+    background-color: aqua;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+thread {
+    background-color: white;
+}
+
+tbody, ul {
+    background-color: whitesmoke;
+}
+
