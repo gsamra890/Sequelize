@@ -1,29 +1,30 @@
 async function populateRestaurant() {
   const diningRequest = await fetch("/api/dining");
   const diningData = await diningRequest.json();
-  const name = document.querySelector(".id");
-  const name = document.querySelector(".name");
-  const name = document.querySelector(".address");
   console.table(diningData);
+  const dining_id = document.querySelector(".dining_id");
+  const name = document.querySelector(".name");
+  const address = document.querySelector(".address");
+  
 
   diningData.data.forEach((item) => {
-    const appendItem = document.createElement("ul");
-    appendItem.classList.add("title", "has-text-centered", "is-parent", "is-3");
-    appendItem.classList('.id')
-    appendName.innerHTML = ` ${item.hall_address.split(',')[0]}`;
-    id.append(appendName)
+    const appendID = document.createElement("ul");
+    //appendID.classList.add("title", "has-text-centered", "is-parent", "is-3");
+    appendID.classList('.dining_id')
+    appendID.innerHTML = ` ${item.hall_id}`;
+    dining_id.append(appendID)
 
-    const appendItem = document.createElement("ul");
-    appendItem.classList.add("title", "has-text-centered", "is-parent", "is-3");
-    appendItem.classList('.name')
+    const appendName = document.createElement("ul");
+    //appendName.classList.add("title", "has-text-centered", "is-parent", "is-3");
+    appendName.classList('.name')
     appendName.innerHTML = ` ${item.hall_name}`;
     name.append(appendName)
 
-    const appendItem = document.createElement("ul");
-    appendItem.classList.add("title", "has-text-centered", "is-parent", "is-3");
-    appendItem.classList('.address')
-    appendName.innerHTML = ` ${item.hall_address.split(',')[0]}`;
-    address.append(appendName)
+    const appendAddres = document.createElement("ul");
+    //appendAddres.classList.add("title", "has-text-centered", "is-parent", "is-3");
+    appendAddres.classList('.address')
+    appendAddres.innerHTML = ` ${item.hall_address.split(',')[0]}`;
+    address.append(appendAddres)
   });
 }
 

@@ -9,7 +9,7 @@ section {
 
 }
 body {
-    background-color: aqua;
+    background-color: rgb(78, 184, 245);
     text-align: center;
     margin-right: auto;
     margin-left: auto;
@@ -17,10 +17,14 @@ body {
 }
 
 thread {
-    background-color: white;
+    background-color: rgb(160, 160, 160);
 }
 
 tbody, ul {
-    background-color: whitesmoke;
+    background-color: rgb(255, 255, 255);
 }
 
+td {
+    
+    flex-direction: column;
+}
