@@ -1,30 +1,23 @@
+html {
+  background-color: rgb(247, 234, 234);
+}
 h1 {
-    text-align: center;
+  line-height: 1.2;
+  text-align: center;
 }
 
-section {
-    text-align: center;
-    margin-right: auto;
-    margin-left: auto;
-
-}
 body {
-    background-color: rgb(78, 184, 245);
-    text-align: center;
-    margin-right: auto;
-    margin-left: auto;
-
-}
-
-thread {
-    background-color: rgb(160, 160, 160);
-}
-
-tbody, ul {
-    background-color: rgb(255, 255, 255);
+  background-color: rgb(247, 234, 234);
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 td {
-    
-    flex-direction: column;
+  background-color: rgb(130, 231, 235);
+}
+
+tbody,
+ul {
+  background-color: rgb(213, 214, 214);
 }
