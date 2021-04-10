@@ -22,7 +22,7 @@ async function dinnerHall() {
 }
 
 async function Meal() {
-  const mealRequest = await fetch('/api/wholeMeal');
+  const mealRequest = await fetch('/api/meals');
   const mealData =  await mealRequest.json();
   const meals = mealData.data
   const checkMeal = document.querySelector(".target2");
