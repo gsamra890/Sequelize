@@ -86,9 +86,20 @@ router.put("/dining", async (req, res) => {
 /// /////////////////////////////////
 /// ////////Meals Endpoints//////////
 /// /////////////////////////////////
+router.route('/wholeMeal2').get(async (req, res) => {
+  try {
+    const meals = await db.Meals.findAll({ include: db.Macros, limit: 10 });
+    console.log(meals);
+    res.json(meals);
+  } catch (err) {
+    console.error(err);
+    res.json({ message: err });
+  }
+});
+
 router.get("/meals", async (req, res) => {
   try {
-    const meals = await db.Meals.findAll();
+    const meals =await db.Meals.findAll();
     res.json(meals);
   } catch (err) {
     console.error(err);
